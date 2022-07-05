@@ -3,21 +3,31 @@
   padding: 0;
 
   box-sizing: border-box;
+  transition: all .3s;
 }
 
 :root {
-  --hue: 230;
-  --primary: hsl(var(--hue), 81%, 60%);
+  --hue: 150;
+  --primary: hsl(var(--hue), 80%, 60%);
   --primaryDark: hsla(var(--hue), 100%, 9%);
   --primarylight: hsla(var(--hue), 100%, 9%, 0.8);
-  --primaryHover: hsl(var(--hue), 81%, 50%);
+  --primaryHover: hsl(calc(var(--hue) + 10), 80%, 45%);
+  --backgroundColor: hsl(0, 0%, 90%);
   --robotoMono: 'Roboto Mono', monospace;
 }
 
+*.darkTheme {
+  --primary: hsl(var(--hue), 80%, 40%);
+  --primaryDark: hsla(var(--hue), 60%, 90%);
+  --primarylight: hsla(var(--hue), 60%, 90%, 0.8);
+  --primaryHover: hsl(var(--hue), 80%, 55%);
+  --backgroundColor: hsl(252, 23%, 9%);
+}
 
 body {
   min-height: 100vh;
-  background-color: #E5E5E5;
+  padding: 3.5rem 0;
+  background-color: var(--backgroundColor);
   font-family: 'Roboto', sans-serif;
 
   display: flex;
@@ -27,6 +37,8 @@ body {
 }
 
 #userAvatar {
+  cursor: pointer;
+
   display: block;
   margin: 0 auto;
   width: 100px;
@@ -36,7 +48,7 @@ body {
 
   padding: 4px;
   box-sizing: content-box;
-  background-color: white;
+  background-color: var(--backgroundColor);
   margin-bottom: 14px;
 }
 
@@ -86,7 +98,7 @@ body {
 }
 
 footer {
-  color: hsla(var(--hue), 100%, 9%, 0.6);
+  color: var(--primarylight);
   font-size: 12px;
   font-weight: 500;
 }
