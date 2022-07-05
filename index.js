@@ -1,4 +1,4 @@
-const userAvatar = document.getElementById('userAvatar')
+const userAvatar = document.getElementById('toggleInput')
 
 function toggleTheme() {
   const body = document.querySelector('body');
