@@ -1,13 +1,11 @@
-const userAvatar = document.getElementById('toggleInput')
+const body = document.querySelector('body');
 
 function toggleTheme() {
-  const body = document.querySelector('body');
-
-  if (body.classList.contains('darkTheme')) {
-    body.classList.remove('darkTheme')
+  if (body.classList.contains('themeDark')) {
+    body.classList.remove('themeDark')
   } else {
-    body.classList.add('darkTheme')
+    body.classList.add('themeDark')
   }
 };
 
-userAvatar.addEventListener('click', toggleTheme);
+body.addEventListener('click', toggleTheme);

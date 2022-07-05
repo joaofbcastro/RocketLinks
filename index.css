@@ -1,151 +1,113 @@
 * {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
-  transition: all .3s;
 }
 
 :root {
-  --hue: 266;
-  --primary: hsl(var(--hue), 80%, 60%);
-  --primaryDark: hsla(var(--hue), 100%, 9%);
-  --primarylight: hsla(var(--hue), 100%, 9%, 0.8);
-  --primaryHover: hsl(calc(var(--hue) + 10), 80%, 45%);
-  --backgroundColor: hsl(0, 0%, 90%);
-  --robotoMono: 'Roboto Mono', monospace;
+  --backgroundColor: #EDF2FF;
+  --primaryColor: #4263EB;
+  --primaryColorHover: #364FC7;
+  --primaryColorDark: #00082E;
+  --primaryColorMediunDark: #00082F;
 }
 
-*.darkTheme {
-  --primary: hsl(var(--hue), 80%, 40%);
-  --primaryDark: hsla(var(--hue), 60%, 90%);
-  --primarylight: hsla(var(--hue), 60%, 90%, 0.8);
-  --primaryHover: hsl(var(--hue), 80%, 55%);
-  --backgroundColor: hsl(252, 23%, 9%);
+body.themeDark {
+  --backgroundColor: #00082F;
+  --primaryColorDark: #EDF2FF;
+  --primaryColorMediunDark: #EDF2FF;
 }
 
-#toggleButton {
-  width: 300px;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: right;
+a {
+  text-decoration: none;
 }
-
-#toggleInput {
-  display: none;
-}
-
-#toggleLabel {
-  cursor: pointer;
-
-  display: flex;
-
-  width: 50px;
-  height: 30px;
-  padding: 5px;
-
-  border-radius: 40px;
-  background-color: #777;
-}
-
-.slider {
-  width: 20px;
-  height: 20px;
-
-  border-radius: 100px;
-  transition: all .3s ease-in-out;
-  background-color: white;
-}
-
-#toggleInput:checked ~ #toggleLabel {
-  background-color: var(--primary);
-}
-
-#toggleInput:checked ~ #toggleLabel .slider{
-  transform: translateX(20px);
-}
-
-
 
 body {
   min-height: 100vh;
-  padding: 3.5rem 0;
-  background-color: var(--backgroundColor);
   
-  text-align: center;
+  background: var(--backgroundColor);
   font-family: 'Roboto', sans-serif;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
+  transition: background .5s;
 }
 
-#userAvatar {
-  cursor: pointer;
-
-  display: block;
-  margin: 0 auto;
-  width: 100px;
-
-  border: 4px solid var(--primary);
-  border-radius: 100px;
-
-  padding: 4px;
-  box-sizing: content-box;
-  background-color: var(--backgroundColor);
-  margin-bottom: 14px;
-}
-
-#userName {
-  color: var(--primaryDark);
-  
-  font-size: 32px;
-  margin-bottom: 8px;
-}
-
-#userTag {
-  color: var(--primarylight);
-  font-size: 18px;
-  font-family: var(--robotoMono);
-
-  margin-bottom: 48px;
-}
-
-.linksList {
-  list-style: none;
-  margin-bottom: 32px;
-}
-
-.linksList .linkButton {
+.container {
+  text-align: center;
   width: 300px;
-  height: 60px;
-  border-radius: 6px;
+  margin: 60px auto;
+}
 
+img {
+  width: 100%;
+}
+
+img.userAvatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 3.7px;
+  border: 4px solid var(--primaryColor);
+}
+
+h1.userName {
+  font-size: 32px;
+  color: var(--primaryColorMediunDark);
+  margin-top: 24px;
+  margin-bottom: 8px;
+
+  transition: color .5s;
+}
+
+p.userUsername {
+  color: var(--primaryColorDark);
+  opacity: .8;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+
+  transition: color .5s;
+}
+
+ul {
+  list-style: none;
+  margin: 48px 0;
+}
+
+ul li a {
+  height: 53px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  
-  cursor: pointer;
+  justify-content: center;
+  background: var(--primaryColor);
   color: white;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
   text-transform: uppercase;
+  font-size: 14px;
 
   margin-bottom: 16px;
-  background-color: var(--primary);
+  border-radius: 6px;
 
-  transition: background-color .2s;
+  transition: background .5s;
 }
 
-.linksList .linkButton:hover {
-  background-color: var(--primaryHover);
+ul li a:hover {
+  background: var(--primaryColorHover);
 }
 
-footer {
-  color: var(--primarylight);
-  font-size: 12px;
+footer{
   font-weight: 500;
+  font-size: 12px;
+  color: var(--primaryColorDark);
+  opacity: 0.6;
+
+  transition: all .5s;
 }
+
+footer:hover {
+  opacity: 1;
+}
+
+footer a {
+  color: var(--primaryColorDark);
+  transition: color .5s;
+}
+
