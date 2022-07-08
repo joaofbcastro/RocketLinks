@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="Rocket Links" src="./assets/preview.png" width="100%">
+  <a href="https://joaofbcastro.github.io/RocketLinks"><img alt="Rocket Links" src="./assets/preview.png" width="100%"></a>
 </p>
 
 ## 🚀 Tecnologias
