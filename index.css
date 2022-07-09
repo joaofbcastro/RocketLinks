@@ -13,7 +13,9 @@
 }
 
 body.themeDark {
-  --backgroundColor: #00082F;
+  --backgroundColor: #1B2430;
+  --primaryColor: #816797;
+  --primaryColorHover: #51557E;
   --primaryColorDark: #EDF2FF;
   --primaryColorMediunDark: #EDF2FF;
 }
