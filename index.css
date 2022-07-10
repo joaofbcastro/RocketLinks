@@ -75,7 +75,9 @@ ul {
   margin: 48px 0;
 }
 
-ul li a {
+ul li a.linkButton {
+  position: relative;
+
   height: 53px;
   display: flex;
   align-items: center;
@@ -95,6 +97,17 @@ ul li a:hover {
   background: var(--primaryColorHover);
 }
 
+.linkButton  img{
+  position: absolute;
+
+  left: 1.5rem;
+
+  width: 24px;
+  height: 24px;
+
+  filter: invert(1);
+}
+
 footer{
   font-weight: 500;
   font-size: 12px;
@@ -106,6 +119,20 @@ footer{
 
 footer:hover {
   opacity: 1;
+}
+
+footer .credits {
+  font-size: 10px;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0px;
+
+  transition: all .5s;
+}
+
+footer:hover .credits {
+  visibility: visible;
+  height: 54px;
 }
 
 footer a {
