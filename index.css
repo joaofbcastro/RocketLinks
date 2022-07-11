@@ -36,7 +36,8 @@ body {
 .container {
   text-align: center;
   width: 300px;
-  margin: 60px auto;
+  margin: 0 auto;
+  padding: 60px 10px;
 }
 
 img {
@@ -72,7 +73,7 @@ p.userUsername {
 
 ul {
   list-style: none;
-  margin: 48px 0;
+  margin: 36px 0;
 }
 
 ul li a.linkButton {
@@ -139,4 +140,3 @@ footer a {
   color: var(--primaryColorDark);
   transition: color .5s;
 }
-
