@@ -1,47 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --backgroundColor: #EDF2FF;
-  --primaryColor: #4263EB;
-  --primaryColorHover: #364FC7;
-  --primaryColorDark: #00082E;
-  --primaryColorMediunDark: #00082F;
-}
-
-body.themeDark {
-  --backgroundColor: #1B2430;
-  --primaryColor: #816797;
-  --primaryColorHover: #51557E;
-  --primaryColorDark: #EDF2FF;
-  --primaryColorMediunDark: #EDF2FF;
-}
-
-a {
-  text-decoration: none;
-}
+@import url("reset.css");
+@import url("colours.css");
 
 body {
   min-height: 100vh;
+  padding: 2.5rem 0;
   
   background: var(--backgroundColor);
   font-family: 'Roboto', sans-serif;
 
-  transition: background .5s;
+  transition: all .5s;
 }
 
 .container {
   text-align: center;
   width: 300px;
   margin: 0 auto;
-  padding: 60px 10px;
-}
-
-img {
-  width: 100%;
+  padding: 0 10px;
 }
 
 img.userAvatar {
@@ -71,8 +45,7 @@ p.userUsername {
   transition: color .5s;
 }
 
-ul {
-  list-style: none;
+ul.linksList {
   margin: 36px 0;
 }
 

@@ -1,0 +1,15 @@
+:root {
+  --backgroundColor: #EDF2FF;
+  --primaryColor: #4263EB;
+  --primaryColorHover: #364FC7;
+  --primaryColorDark: #00082E;
+  --primaryColorMediunDark: #00082F;
+}
+
+body.themeDark {
+  --backgroundColor: #1B2430;
+  --primaryColor: #816797;
+  --primaryColorHover: #51557E;
+  --primaryColorDark: #EDF2FF;
+  --primaryColorMediunDark: #EDF2FF;
+}
