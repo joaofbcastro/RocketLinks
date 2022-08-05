@@ -1,15 +1,17 @@
 :root {
-  --backgroundColor: #EDF2FF;
-  --primaryColor: #4263EB;
-  --primaryColorHover: #364FC7;
-  --primaryColorDark: #00082E;
-  --primaryColorMediunDark: #00082F;
+  --backgroundColor: #edf2ff;
+  --primaryColor: #4263eb;
+  --primaryColorHover: #364fc7;
+  --primaryColorDark: #00082e;
+  --primaryColorMediunDark: #00082f;
 }
 
-body.themeDark {
-  --backgroundColor: #1B2430;
-  --primaryColor: #816797;
-  --primaryColorHover: #51557E;
-  --primaryColorDark: #EDF2FF;
-  --primaryColorMediunDark: #EDF2FF;
+@media (prefers-color-scheme: dark) {
+  body {
+    --backgroundColor: #1d2021;
+    --primaryColorDark: #edf2ff;
+    --primaryColor: #4264ebb0;
+    --primaryColorHover: #364ec7a4;
+    --primaryColorMediunDark: #edf2ff;
+  }
 }
