@@ -102,11 +102,13 @@ footer .credits {
   height: 0px;
 
   transition: all .5s;
+  transition-delay: 1.5s;
 }
 
 footer:hover .credits {
   visibility: visible;
   height: 54px;
+  transition-delay: 0s;
 }
 
 footer a {
