@@ -3,12 +3,12 @@
 
 body {
   min-height: 100vh;
-  padding: 2.5rem 0;
-  
-  background: var(--backgroundColor);
-  font-family: 'Roboto', sans-serif;
+  padding: 2rem 0;
 
-  transition: all .5s;
+  background: var(--backgroundColor);
+  font-family: "Roboto", sans-serif;
+
+  transition: all 0.5s;
 }
 
 .container {
@@ -32,21 +32,21 @@ h1.userName {
   margin-top: 24px;
   margin-bottom: 8px;
 
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 p.userUsername {
   color: var(--primaryColorDark);
-  opacity: .8;
-  font-family: 'Roboto Mono', monospace;
+  opacity: 0.8;
+  font-family: "Roboto Mono", monospace;
   font-size: 18px;
   font-weight: 400;
 
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 ul.linksList {
-  margin: 36px 0;
+  margin: 36px 0 0;
 }
 
 ul li a.linkButton {
@@ -64,14 +64,14 @@ ul li a.linkButton {
   margin-bottom: 16px;
   border-radius: 6px;
 
-  transition: background .5s;
+  transition: background 0.5s;
 }
 
 ul li a:hover {
   background: var(--primaryColorHover);
 }
 
-.linkButton  img{
+.linkButton img {
   position: absolute;
 
   left: 1.5rem;
@@ -82,13 +82,15 @@ ul li a:hover {
   filter: invert(1);
 }
 
-footer{
+footer {
+  margin-top: 1.4rem;
+
   font-weight: 500;
   font-size: 12px;
   color: var(--primaryColorDark);
   opacity: 0.6;
 
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 footer:hover {
@@ -96,22 +98,44 @@ footer:hover {
 }
 
 footer .credits {
-  font-size: 10px;
   visibility: hidden;
-  overflow: hidden;
-  height: 0px;
+  position: relative;
 
-  transition: all .5s;
+  overflow: hidden;
+  height: 0;
+  margin-top: 0.5rem;
+
+  font-size: 10px;
+
+  transition: 0.5s ease-in;
   transition-delay: 1.5s;
+}
+
+footer .credits::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primaryColor);
+
+  transition: 0.5s ease;
+  transition-delay: 25s;
 }
 
 footer:hover .credits {
   visibility: visible;
-  height: 54px;
+  height: 35px;
+  transition-delay: .5s;
+}
+
+footer:hover .credits::after {
+  width: 100%;
   transition-delay: 0s;
 }
 
 footer a {
   color: var(--primaryColorDark);
-  transition: color .5s;
+  transition: color 0.5s;
 }
