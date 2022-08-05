@@ -6,7 +6,7 @@
   --primaryColorMediunDark: #00082f;
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   body {
     --backgroundColor: #1d2021;
     --primaryColorDark: #edf2ff;
