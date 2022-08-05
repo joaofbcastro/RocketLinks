@@ -98,11 +98,10 @@ footer:hover {
 }
 
 footer .credits {
-  visibility: hidden;
   position: relative;
 
   overflow: hidden;
-  height: 0;
+  height: 2px;
   margin-top: 0.5rem;
 
   font-size: 10px;
@@ -111,7 +110,14 @@ footer .credits {
   transition-delay: 1.5s;
 }
 
+footer .credits div {
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+
 footer .credits::after {
+  visibility: visible;
   content: "";
   position: absolute;
   bottom: 0;
@@ -121,13 +127,17 @@ footer .credits::after {
   background-color: var(--primaryColor);
 
   transition: 0.5s ease;
-  transition-delay: 25s;
+  transition-delay: 2s;
 }
 
 footer:hover .credits {
-  visibility: visible;
   height: 35px;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
+}
+
+footer:hover .credits div {
+  opacity: 1;
+  transition-delay: 1s;
 }
 
 footer:hover .credits::after {
