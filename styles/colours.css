@@ -8,10 +8,10 @@
 
 @media screen and (prefers-color-scheme: dark) {
   body {
-    --backgroundColor: #1d2021;
+    --backgroundColor: #1f212b;
     --primaryColorDark: #edf2ff;
-    --primaryColor: #4264ebb0;
-    --primaryColorHover: #364ec7a4;
+    --primaryColor: #4264eb88;
+    --primaryColorHover: #364ec765;
     --primaryColorMediunDark: #edf2ff;
   }
 }
