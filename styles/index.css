@@ -107,13 +107,12 @@ footer .credits {
   font-size: 10px;
 
   transition: 0.5s ease-in;
-  transition-delay: 1.5s;
 }
 
 footer .credits div {
   opacity: 0;
   transition: 0.5s;
-  transition-delay: 1s;
+  transition-delay: .5s;
 }
 
 footer .credits::after {
@@ -127,17 +126,15 @@ footer .credits::after {
   background-color: var(--primaryColor);
 
   transition: 0.5s ease;
-  transition-delay: 2s;
+  transition-delay: .5s;
 }
 
 footer:hover .credits {
   height: 35px;
-  transition-delay: 0.5s;
 }
 
 footer:hover .credits div {
   opacity: 1;
-  transition-delay: 1s;
 }
 
 footer:hover .credits::after {
